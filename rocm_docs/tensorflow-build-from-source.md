@@ -82,7 +82,7 @@ cd ~/build.hcc && make -j $(nproc) && make package && sudo dpkg -i hcc*.deb
 Build HIP from source:
 ```
 cd ~ && git clone https://github.com/GPUOpen-ProfessionalCompute-Tools/HIP.git
-cd ~/HIP && mkdir -p build && cd build && cmake .. && make package -j && sudo dpkg -i *.deb 
+cd ~/HIP && mkdir -p build && cd build && cmake .. && make package -j $(nproc) && sudo dpkg -i *.deb 
 ```
 
 Setup environment variables, and add those environment variables at the end of ~/.bashrc 
